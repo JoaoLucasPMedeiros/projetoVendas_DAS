@@ -1,0 +1,154 @@
+<style>
+    body{
+    background-color: #1C2026;   
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+
+main{
+
+    justify-content: center;
+
+}
+
+form{
+    justify-content: center;
+    border: 1px solid wheat;
+    padding: 20px;
+    color: beige;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+label{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input{
+    display: block;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 15px;
+    width: 50%;
+    font-weight: bold;
+    color: antiquewhite;
+    padding: 7px;
+    font-size: 1.02rem;
+    border-radius: 5px;
+    justify-content: center;
+    margin: 10px auto;  
+}
+
+button{
+    margin-top: 2rem;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: rgb(57, 57, 150);
+    font-size: bold;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+h2{
+    color: aliceblue;
+    text-align: center;
+}
+
+select{
+    border: 1px solid white;
+    font-weight: bold;
+    color: antiquewhite;
+    display: inline-block;
+    margin: 4px;
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.serv{
+    width: 50;
+}
+
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.vendas{
+    text-decoration: none;
+    background-color: darkgreen;
+    color: white;
+    padding: 1.02rem;
+    border-radius: 5px;
+
+}
+
+div{
+    display: inline-flex;
+    width: 55%;
+    margin: auto;
+
+}
+.b1{
+    display: block;
+
+}
+
+option{
+    background-color: #1C2026;
+
+}
+
+
+
+
+</style>
+
+<header>
+    <h1>Formulario para cadastrar pagamento</h1>
+</header>
+{{!-- ACTION VAI ENVIAR PARA ESSE INDEREÇO --}}
+<form action="/add-pagamento" autocomplete="off" method="POST">
+    <label>Nome</label>
+    <input type="text" name="nome">
+    <label>Valor</label>
+    <input type="text" name="valor">
+    <div class="over">
+
+    <div class="b1">
+    <label type="text">Serviço</label>
+    <input  class="serv"  type="text" name="servico"> 
+
+    </div>
+    <div class="b2">
+
+    <select name="Fpgto">
+        <option value="PIX">PIX</option>
+        <option value="C.CRÉDITO">C.CRÉDITO</option>
+        <option value="C.DÉBITO">C.DÉBITO</option>
+        <option value="DINHEIRO">DINHEIRO</option>
+    </select>
+    </div>
+
+    </div>
+
+    <button type="submit">ENVIAR</button>
+
+</form>
+
+<footer>
+    <h2>Voltar para relatorio de <a class="vendas"  href="/pagamento">Vendas</a></h2>
+</footer>

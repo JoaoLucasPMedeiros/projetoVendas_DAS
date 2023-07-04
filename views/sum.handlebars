@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body{
+     background-color: #1C2026;
+     color: white;
+}
+main{
+    display: flex;
+    border: 3px solid white;
+    margin: auto;
+    margin-top: 10rem;
+    padding: 4rem;
+    border-radius: 3px;
+}
+
+a{
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: darkred;
+    color: white;
+    padding: 1.02rem;
+   
+}
+
+div{
+    border: 3px solid white;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.bloco{
+    background-color: darkgreen;
+}
+
+.cima{
+    width: 10rem;
+}
+
+
+</style>
+
+
+<head>
+  <title>Soma</title>
+</head>
+<body>
+    
+    <header>
+        <h1 class="title">Relatorio de vendas</h1>
+        <h2>Voltar para <a href="/pagamento">Vendas</a></h2>
+    </header>
+    <main>
+
+    <div class="bloco">
+
+  <h1 class="cima">Vendas</h1>
+  <h2>R$:{{sum}}</h2>
+    </div>
+    <div class="bloco">
+  <h1 class="cima">Clientes</h1>
+  <h2>{{count}} clientes</h2>
+<h3>{{f}}</h3>
+  
+
+    </div>
+    </main>
+</body>
+</html>

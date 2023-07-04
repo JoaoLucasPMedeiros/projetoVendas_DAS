@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cad-Pagamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulario para cadastrar pagamento</h1>
+
+
+<!-- {{!-- ACTION VAI ENVIAR PARA ESSE INDEREÇO --}} -->
+<main>
+    
+    <form action="/add-pagamento"  method="POST">
+        <h2>Lançar venda:</h2>
+        <label>Nome</label>
+        <input type="text" name="nome">
+        <label>Valor</label>
+        <input type="text" name="valor">
+        <button type="submit" >Enviar</button>
+    </form>
+</main>
+</body>
+</html>

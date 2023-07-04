@@ -1,0 +1,152 @@
+
+<style>
+body{
+    background-color: #1C2026;
+}
+
+label{
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+input{
+
+    background-color: transparent;
+    border: 1px solid white;
+    height: 15px;
+    width: 50%;
+    font-weight: bold;
+    color: white;
+    padding: 7px;
+    font-size: 1.02rem;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: white;
+}
+button{
+    margin-top: 2rem;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: rgb(57, 57, 150);
+    font-size: bold;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+#dell{
+    background: darkred;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+    margin: 3rem;
+    
+}
+form{
+    padding: 1rem;
+}
+
+h2{
+    text-align: center;
+}
+
+ul{
+    padding: 10px;
+}
+
+
+p{
+    font-weight: bold;
+
+}
+li{
+    border: 2px solid #707070;
+    list-style: none;
+    border-radius: 5px;
+    height: auto;
+    margin: 3px;
+    padding: 10px;
+}
+
+main{
+    color: aliceblue;
+    background: #1b1b1bec; 
+    border-radius: 10px;
+    height: 500px;
+    overflow: auto;
+    width: 70%;
+    margin: auto;
+    
+}
+
+.vendas{
+    text-decoration: none;
+    background-color: darkgreen;
+    color: white;
+    padding: 1.02rem;
+    border-radius: 5px;
+   
+}
+
+.geral{
+    text-decoration: none;
+    background-color: darkgoldenrod;
+    color: white;
+    padding: 1.02rem;
+    border-radius: 5px;
+   
+
+}
+
+h2{
+    color: aliceblue;
+}
+
+
+</style>
+
+
+
+
+<h1>Lista de pagamento</h1>
+<h2>Lançar venda <a class="vendas" href="/cad-pagamento">Registrar</a></h2>
+<br>
+<h2>Ver <a class="geral" href="/sum">Geral</a></h2>
+<main>
+
+
+
+
+
+<form action="/users" method="GET">
+  <input type="text" name="nome" id="nome" placeholder="Buscar Registros">
+  <button type="submit">Buscar</button>
+</form> 
+
+
+
+    
+
+     {{#each PGTO}}
+    <li>
+        <h2 class="client">Cliente: {{dataValues.nome}}</h2>
+        <p>Valor: R$ {{dataValues.valor}}</p>
+        <p>data: {{#FormatDate dataValues.createdAt}}{{/FormatDate}}</p>
+        <p>Forma de PGTO: {{dataValues.Fpgto}}</p>
+        <p>Descrição do serviço: {{dataValues.servico}}</p>
+        <a href="/del-pagamento/{{dataValues.id}}"><button id="dell">Apagar</button></a>
+    </li>
+    {{/each}}
+</ul>
+</main>
+
